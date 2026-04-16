@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Rate Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="title-section">
+            <label class="field-label">Название проекта</label>
+            <input type="text" id="titleInput" class="title-input" placeholder="Введите название...">
+        </div>
+
+        <div class="main-grid">
+            <div class="item">
+                <label>Сюжет</label>
+                <div class="range-row">
+                    <input type="range" min="0" max="10" value="5" class="slider" id="story">
+                    <span id="storyVal">5</span>
+                </div>
+            </div>
+            <div class="item">
+                <label>Персонажи</label>
+                <div class="range-row">
+                    <input type="range" min="0" max="10" value="5" class="slider" id="chars">
+                    <span id="charsVal">5</span>
+                </div>
+            </div>
+            <div class="item">
+                <label>Анимация</label>
+                <div class="range-row">
+                    <input type="range" min="0" max="10" value="5" class="slider" id="visual">
+                    <span id="visualVal">5</span>
+                </div>
+            </div>
+            <div class="item">
+                <label>Музыка</label>
+                <div class="range-row">
+                    <input type="range" min="0" max="10" value="5" class="slider" id="music">
+                    <span id="musicVal">5</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="extra-card">
+            <div class="item">
+                <label>Вайб</label>
+                <div class="range-row">
+                    <input type="range" min="0" max="5" value="3" class="slider" id="vibe">
+                    <span id="vibeVal">3</span>
+                </div>
+            </div>
+            <div class="item">
+                <label>Реализация</label>
+                <div class="range-row">
+                    <input type="range" min="0" max="5" value="3" class="slider" id="real">
+                    <span id="realVal">3</span>
+                </div>
+            </div>
+        </div>
+
+        <button id="calcBtn" class="primary-btn">Подсчитать и сохранить</button>
+
+        <div id="resultArea" class="result-box hidden">
+            <p>Итоговый результат:</p>
+            <div id="totalScore">0</div>
+        </div>
+
+        <div class="history-container">
+            <div class="history-header">
+                <h3>История оценок</h3>
+                <button id="exportBtn" class="export-btn">💾 Сохранить JSON на диск</button>
+            </div>
+            <div id="historyList" class="history-list">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
